@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <img style = "align-items: center;" height="200px" id = "image" src = "cat.jpg">
+    <br>
+    <br>
+    
+    <button onclick = 'getCat()'>Dog</button>
+    <button onclick = 'getDog()'>Cat</button>
+    <script>
+        var x;
+    function getCat() {
+
+        x = document.getElementById("image").src = "dog.jpeg";
+        return x;
+        
+    }
+    function getDog()
+    {
+        x = document.getElementById("image").src = "cat.jpg";
+        return x;
+    } 
+    </script>
+</body>
+</html>
