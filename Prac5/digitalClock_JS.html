@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body onload = "display_time()">
+    <h1>DIEMS</h1>
+    <p id = "para"></p>
+    <!-- <button onclick="display_time()">Time</button> -->
+    <script>
+        function display_time()
+        {
+            var x = new Date;
+            h = x.getHours();
+            m = x.getMinutes();
+            s = x.getSeconds();
+            var show = document.getElementById("para").innerHTML = h+":"+m+":"+s;
+        }
+        setInterval(()=>{
+            display_time();
+},1000)
+    </script>
+</body>
+</html>

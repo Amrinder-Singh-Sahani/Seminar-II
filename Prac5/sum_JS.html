@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <h1>DIEMS</h1>
+    <p>
+        <input type = "number" id = "one" placeholder = "Number">
+        <input type = "number" id = "two" placeholder = "Number">
+        = <input type = "text" id = "sum" readonly>
+        <button onclick="getSum()">ADD</button>
+
+        <script>
+            function getSum()
+            {
+                var one = parseInt(document.getElementById("one").value);
+                var two = parseInt(document.getElementById("two").value);
+                var c = one+two;
+                document.getElementById("sum").value = c;
+            }
+        </script>
+
+
+    </p>
+</body>
+</html>
