@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+</head>
+<body>
+    <div>
+        
+    <input type = "number" id = "even" placeholder = "How many even numbers you want to print">
+    <input type = "text" id = "printEven" readonly>
+    <!-- <p id = "printEven"></p> -->
+    <button onclick = "getEven()">Even</button>
+    </div>
+    <div>
+    <input type = "number" id = "odd" placeholder = "How many odd numbers you want to print">
+    <p id = "printOdd"></p>
+    <button onclick = "getOdd()">Odd</button>
+</div>
+<script>
+    function getEven()
+    {
+        var eve = parseInt(document.getElementById("even").value);
+        for(i = 0;i<eve;i++)
+        {
+            if(i%2==0)
+            {
+                document.getElementById("printeven").value = i;
+            }
+        }
+    }
+</script>
+    
+</body>
+</html>
