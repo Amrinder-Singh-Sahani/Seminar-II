@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div style = "text-align: center;">
+        
+    Name:
+    <input type="text" id="name"><br><br>
+    Email:
+    <input type="text" id="email"><br><br>
+    Mobile No:
+    <input type="text" id="mobile"><br><br>
+    Gender:
+    <input type="radio" id="male" name="gender" value="Male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="Female">
+    <label for="female">Female</label><br><br>
+    Education:
+    <input type="checkbox" id="SSC" name = "education" value="SSC">
+    <label for="education">SSC</label>
+    <input type="checkbox" id = "HSC" name="education" value="HSC">
+    <label for="education">HSC</label>
+    <input type="checkbox" id = "diploma" name = "education" value="Diploma">
+    <label for="education">Diploma</label>
+    <input type="checkbox" id = "btech" name ="education" value="B.Tech">
+    <label for="education">B.Tech</label><br><br>
+    <button onclick="getInput()">Submit</button>
+    <p id = "returnData"></p>
+    <script>
+        
+
+        
+        function getInput()
+        {
+        let name = document.getElementById("name").value;
+        let email= document.getElementById("email").value;
+        let mobileNo = document.getElementById("mobile").value;
+
+        let data = "Name "+name+"<br>Email"+email+"<br>Mobile"+mobileNo+"<br>";
+
+        if(document.getElementById("male").checked)
+        {
+            data = data+"<br>"+"Gender: Male <br> Education: ";
+        }   
+        if(document.getElementById("female").checked)
+        {
+            data = data+"<br>"+"Gender: Female <br> Education: ";
+        }
+        if(document.getElementById("SSC").checked)
+        {
+            data = data+"<br>"+"SSC ";
+        }
+        if(document.getElementById("HSC").checked)
+        {
+            data = data+"<br>"+"HSC ";
+        }
+        if(document.getElementById("Diploma").checked)
+        {
+            data = data+"<br>"+"Diploma";
+        }
+        if(document.getElementById("B.Tech").checked)
+        {
+            data = data+"<br>"+"B.Tech ";
+        }
+        
+        document.getElementById("returnData").innerHTML = data;
+        }
+        </script>
+    </div>
+</body>
+
+</html>

@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numbers</title>
+    <style>
+        .container {
+            margin: 50px;
+            width: 500px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-    <div>
-        
-    <input type = "number" id = "even" placeholder = "How many even numbers you want to print">
-    <input type = "text" id = "printEven" readonly>
-    <!-- <p id = "printEven"></p> -->
-    <button onclick = "getEven()">Even</button>
+
+    <div class="container">
+        <h2>Even and Odd Numbers</h2>
+        <button onclick="displayEven()">Even Numbers</button>
+        <button onclick="displayOdd()">Odd Numbers</button><br><br>
+        <div id="result"></div>
     </div>
-    <div>
-    <input type = "number" id = "odd" placeholder = "How many odd numbers you want to print">
-    <p id = "printOdd"></p>
-    <button onclick = "getOdd()">Odd</button>
-</div>
-<script>
-    function getEven()
-    {
-        var eve = parseInt(document.getElementById("even").value);
-        for(i = 0;i<eve;i++)
-        {
-            if(i%2==0)
-            {
-                document.getElementById("printeven").value = i;
+
+    <script>
+        function displayEven() {
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            for (var i = 1; i <= 20; i++) {
+                if (i % 2 === 0) {
+                    resultDiv.innerHTML += i + ' ';
+
+                }
             }
         }
-    }
-</script>
-    
+
+        function displayOdd() {
+            var resultDiv = document.getElementById('result');
+            resultDiv.innerHTML = '';
+
+            for (var i = 1; i <= 20; i++) {
+                if (i % 2 !== 0) {
+                    resultDiv.innerHTML += i + ' ';
+                }
+            }
+        }
+    </script>
+
 </body>
+
 </html>
