@@ -23,54 +23,51 @@
     <label for="female">Female</label><br><br>
     Education:
     <input type="checkbox" id="SSC" name = "education" value="SSC">
-    <label for="education">SSC</label>
+    <label for="SSC">SSC</label>
     <input type="checkbox" id = "HSC" name="education" value="HSC">
-    <label for="education">HSC</label>
+    <label for="HSC">HSC</label>
     <input type="checkbox" id = "diploma" name = "education" value="Diploma">
-    <label for="education">Diploma</label>
+    <label for="diploma">Diploma</label>
     <input type="checkbox" id = "btech" name ="education" value="B.Tech">
-    <label for="education">B.Tech</label><br><br>
+    <label for="btech">B.Tech</label><br><br>
     <button onclick="getInput()">Submit</button>
     <p id = "returnData"></p>
     <script>
-        
-
-        
         function getInput()
-        {
-        let name = document.getElementById("name").value;
-        let email= document.getElementById("email").value;
-        let mobileNo = document.getElementById("mobile").value;
+{
+    let name = document.getElementById("name").value;
+    let email= document.getElementById("email").value;
+    let mobileNo = document.getElementById("mobile").value;
 
-        let data = "Name "+name+"<br>Email"+email+"<br>Mobile"+mobileNo+"<br>";
+    let data = "Name: "+name+"<br>Email: "+email+"<br>Mobile: "+mobileNo+"<br>";
 
-        if(document.getElementById("male").checked)
-        {
-            data = data+"<br>"+"Gender: Male <br> Education: ";
-        }   
-        if(document.getElementById("female").checked)
-        {
-            data = data+"<br>"+"Gender: Female <br> Education: ";
-        }
-        if(document.getElementById("SSC").checked)
-        {
-            data = data+"<br>"+"SSC ";
-        }
-        if(document.getElementById("HSC").checked)
-        {
-            data = data+"<br>"+"HSC ";
-        }
-        if(document.getElementById("Diploma").checked)
-        {
-            data = data+"<br>"+"Diploma";
-        }
-        if(document.getElementById("B.Tech").checked)
-        {
-            data = data+"<br>"+"B.Tech ";
-        }
-        
-        document.getElementById("returnData").innerHTML = data;
-        }
+    if(document.getElementById("male").checked)
+    {
+        data = data+"Gender: Male <br> Education: ";
+    }   
+    if(document.getElementById("female").checked)
+    {
+        data = data+"Gender: Female <br> Education: ";
+    }
+    if(document.getElementById("SSC").checked)
+    {
+        data = data+"SSC ";
+    }
+    if(document.getElementById("HSC").checked)
+    {
+        data = data+"HSC ";
+    }
+    if(document.getElementById("diploma").checked)
+    {
+        data = data+"Diploma ";
+    }
+    if(document.getElementById("btech").checked)
+    {
+        data = data+"B.Tech ";
+    }
+    
+    document.getElementById("returnData").innerHTML = data;
+}
         </script>
     </div>
 </body>
