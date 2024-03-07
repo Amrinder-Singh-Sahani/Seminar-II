@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <style>
+    div {
+      width: 30%;
+      display: inline-block;
+
+      /* height: 30px; */
+    }
+
+    #external {
+      height: 30px;
+      /* align-self: right; */
+    }
+  </style>
+</head>
+
+<body>
+
+
+
+
+  <div id="move" style="background-color:white">
+    <h2 id="external"></h2>
+    <p style="text-align: center;" id="external">hover</p>
+    <p id="external"></p>
+  </div>
+
+  <div id="move2" style="background-color:white">
+    <h2 id="external"></h2>
+    <p style="text-align: center;" id="external">hover</p>
+    <p id="external"></p>
+  </div>
+
+
+  <script>
+    var x = document.getElementById("move");
+    x.addEventListener("mouseover", myFunction);
+    x.addEventListener("mouseout", myThirdFunction);
+
+    function myFunction() {
+      document.getElementById("move").style = "background-color:red";
+    }
+
+    function myThirdFunction() {
+      document.getElementById("move").style = "background-color:white";
+    }
+
+    var y = document.getElementById("move2");
+    y.addEventListener("mouseover", myFunction2);
+    y.addEventListener("mouseout", myThirdFunction2);
+
+    function myFunction2() {
+      document.getElementById("move2").style = "background-color:blue";
+    }
+
+    function myThirdFunction2() {
+      document.getElementById("move2").style = "background-color:white";
+    }
+  </script>
+
+</body>
+
+</html>
