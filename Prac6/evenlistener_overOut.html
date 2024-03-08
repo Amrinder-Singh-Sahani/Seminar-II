@@ -30,15 +30,15 @@
 
 <div style = "text-align: center;">
   
-  <div id="move" style="background-color:white">
+  <div id="move" style="background-color:black">
     <h2 id="external"></h2>
-    <p style="text-align: center;" id="external">hover</p>
+    <p style="text-align: center;" id="change"></p>
     <p id="external"></p>
   </div>
 
-  <div id="move2" style="background-color:white">
+  <div id="move2" style="background-color:black">
     <h2 id="external"></h2>
-    <p style="text-align: center;" id="external">hover</p>
+    <p style="text-align: center;" id="change2"></p>
     <p id="external"></p>
   </div>
 
@@ -51,6 +51,7 @@
 
     function myFunction() {
       document.getElementById("move").style = "background-color:red";
+      document.getElementById("change").innerHTML = "click";
     }
 
     function myThirdFunction() {
@@ -63,6 +64,7 @@
 
     function myFunction2() {
       document.getElementById("move2").style = "background-color:blue";
+      document.getElementById("change2").innerHTML = "click";
     }
 
     function myThirdFunction2() {
