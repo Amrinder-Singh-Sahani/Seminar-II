@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Verification</title>
+</head>
+
+<body >
+    <div style = "margin-left: 40%;">
+        <form id = "emailVerify">
+        <div>
+            <input type="text" name="email" placeholder="Email" id="email">
+            <p id="emailError"></p>
+        </div>
+        <div>
+            <input type="password" name="Password" placeholder="Password" id="pass">
+            <p id="passError"></p>
+        </div>
+        <button type="submit">Submit</button>
+        <p id = "registered"></p>
+    </div>
+</form>
+    <script>
+
+        document.getElementById('emailVerify').addEventListener('submit', function (event) {
+
+            var email = document.getElementById("email").value;
+            var password = document.getElementById("pass").value;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
+
+            if (email === "") {
+                event.preventDefault();
+
+                document.getElementById("emailError").innerHTML = "Email is required";
+
+            }
+            else if (!emailRegex.test(email)) {
+                event.preventDefault();
+                document.getElementById("emailError").innerHTML = "Invalid email format";
+                if (document.getElementById("passError").innerHTML === "Password is required") {
+                    document.getElementById("passError").innerHTML = "";
+                }
+            }
+
+            
+            else if (password === "") {
+                event.preventDefault();
+                document.getElementById("passError").innerHTML = "Password is required";
+                document.getElementById("emailError").innerHTML = "";
+                
+            }
+            else if (!passwordRegex.test(password)) {
+                event.preventDefault();
+                document.getElementById("passError").innerHTML = "Password must be at least 8 characters, including uppercase, lowercase, and a digit";                    
+                document.getElementById("emailError").innerHTML = "";
+
+                }
+            else
+            {
+                event.preventDefault();
+                document.getElementById("registered").innerHTML = "Registered successfully";
+                document.getElementById("emailError").innerHTML = "";
+                document.getElementById("passError").innerHTML = "";
+            }
+        });
+    </script>
+</body>
+
+</html>
+
+
+                
